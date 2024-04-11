@@ -20,6 +20,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import MyDropdown from "./components/ui/dropdown";
+import { posts } from "./constant/posts";
+import TablePosts from "./components/table/TablePosts";
+import InputDropdownSearch from "./components/inputs/InputDropdownSearch";
 
 function App() {
   const options = [
@@ -130,7 +133,23 @@ function App() {
             test5
           </MyDropdown.Item>
         </MyDropdown>
+
+        {/* <h1 className="text-lg text-center font-bold mt-10 mb-10">Export</h1>
+        <TablePosts />
+
+        <Button onClick={() => downloadPDF()}>Export</Button> */}
+
+        <h1 className="text-lg text-center font-bold mt-10 mb-10">
+          Input dropdown
+        </h1>
+
+        <InputDropdownSearch />
+
+        <Button>NExt Topic</Button>
       </div>
+      <br />
+      <br />
+      <br />
     </>
   );
 }
