@@ -15,3 +15,7 @@ test5
 
 main
 main-feature
+feat1
+lorem
+lorem
+lorem
