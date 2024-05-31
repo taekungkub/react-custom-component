@@ -23,6 +23,7 @@ import MyDropdown from "./components/ui/dropdown";
 import { posts } from "./constant/posts";
 import TablePosts from "./components/table/TablePosts";
 import InputDropdownSearch from "./components/inputs/InputDropdownSearch";
+import InputDropdownSearch2 from "./components/inputs/InputDropdownSearch2";
 
 function App() {
   const options = [
@@ -50,7 +51,6 @@ function App() {
           <Button variant={"link"}>link</Button>
           <Button variant={"ghost"}>ghost</Button>
         </div>
-
         <h1 className="text-lg text-center font-bold"> with icon</h1>
         <div className="flex gap-2 items-center">
           <Button variant="outline" size="icon">
@@ -75,7 +75,6 @@ function App() {
             <Mail className="mr-2 h-4 w-4" /> Login with Email
           </Button>
         </div>
-
         <h1 className="text-lg text-center font-bold"> with loading</h1>
         <div className="flex gap-2 items-center">
           <Button disabled>
@@ -90,7 +89,6 @@ function App() {
             <Loader2 className="h-4 w-4 animate-spin" />
           </Button>
         </div>
-
         <h1 className="text-lg text-center font-bold mt-10"> Search</h1>
         {/* @ts-ignore */}
         <SearchSelector
@@ -101,13 +99,10 @@ function App() {
           }}
           noClearButton
         />
-
         <h1 className="text-lg text-center font-bold mt-10"> Pagination</h1>
         {/* @ts-ignore */}
         <Pagination search={search} fetchLists={() => {}} data={Array.of(10)} />
-
         <h1 className="text-lg text-center font-bold mt-10"> Dropdown</h1>
-
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Button variant="outline">Dropdown Shadcn</Button>
@@ -121,7 +116,6 @@ function App() {
             <DropdownMenuItem>Subscription</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-
         <MyDropdown>
           <MyDropdown.Item onClick={() => console.log("1")}>
             test
@@ -133,19 +127,30 @@ function App() {
             test5
           </MyDropdown.Item>
         </MyDropdown>
-
         {/* <h1 className="text-lg text-center font-bold mt-10 mb-10">Export</h1>
         <TablePosts />
 
         <Button onClick={() => downloadPDF()}>Export</Button> */}
-
         <h1 className="text-lg text-center font-bold mt-10 mb-10">
           Input dropdown
         </h1>
-
         <InputDropdownSearch />
-
-        <Button>NExt Topic</Button>
+        <br />
+        <br />
+        <InputDropdownSearch2
+          label="InputDropdownSearch2"
+          placeholder="Search"
+          options={[]}
+        />
+        <br />
+        <br />
+        <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br />
       </div>
       <br />
       <br />
