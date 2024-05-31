@@ -30,7 +30,6 @@ interface Props {
   isLoading?: boolean;
   isClear?: boolean;
   readOnly?: boolean;
-  className?: string;
 }
 
 export default function InputDropdownSearch2({
@@ -48,7 +47,6 @@ export default function InputDropdownSearch2({
   isLoading = false,
   isClear = false,
   readOnly = false,
-  className,
 }: Props) {
   const [searchQuery, setSearchQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -139,15 +137,9 @@ export default function InputDropdownSearch2({
         </label>
       )}
       <div
-        className={cn(
-          "relative w-full cursor-pointer rounded-lg border border-gy-stoke text-gy-text",
-          {
-            "mt-2": label,
-            "!border-red-primary": error,
-          },
-          `${height || "global-input-height"}`,
-          className
-        )}
+        className={`relative w-full cursor-pointer rounded-lg border border-gy-stoke text-gy-text ${
+          label && " mt-2 "
+        } ${height || "global-input-height"} ${error && "!border-red-primary"}`}
         ref={drpodownRef}
       >
         <div className="flex  justify-between relative items-center">
